@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Pani Gouraw K | Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="bar"></div>
+
+    <header class="nav">
+      <div class="wrap">
+        <b>KALISETTY.</b>
+        <nav id="menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Internship</a>
+          <a href="#workshops">Workshops</a>
+          <a href="#certs">Certifications</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="themeBtn" aria-label="Switch light or dark mode">🌙</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- HOME -->
+      <div class="hero" id="home">
+        <div>
+          <span class="pill"><i></i>Open to internships &amp; fresher roles</span>
+          <h1>Pani Gouraw K<span>Web Developer</span></h1>
+          <p>
+            I turn what I learn into what I build.<br /><br />
+            From workshops and internships to real-world projects, every
+            experience has helped me turn ideas into working solutions.<br /><br />
+            Scroll down and explore my journey.
+          </p>
+          <a class="btn main" href="#projects">View projects</a>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+        <div class="photo">
+          <img src="portfolioImages/myimage.jpg" alt="Pani Gouraw K" />
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>About me</h2>
+        <div class="about">
+          <p id="aboutText">
+            I’m a Web Development fresher who enjoys turning ideas into working
+            websites.<br /><br />
+            My journey started with the basics of HTML, CSS, and JavaScript, and
+            gradually grew into building interactive interfaces with React and
+            exploring backend development with Python and FastAPI. Workshops,
+            internships, and personal projects have given me opportunities to
+            take what I learn and actually build with it.<br /><br />
+            I don’t consider learning as something that ends after completing a
+            course. I learn by trying, breaking things, figuring out why they
+            don’t work, and building them again better.<br /><br />
+            Right now, I’m focused on becoming a developer who can create clean,
+            useful, and real-world web applications — while continuously
+            improving one project at a time.<br /><br />
+            <span class="motto">Learn → Build → Break → Fix → Improve.</span>
+          </p>
+          <div class="facts" id="facts"></div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <p class="sub">Tools I use and the ones I am learning now.</p>
+        <div class="skills" id="skillBox"></div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <p class="sub">Click any image to see it bigger.</p>
+        <div class="grid" id="projectBox"></div>
+      </section>
+
+      <!-- INTERNSHIP -->
+      <section id="experience">
+        <h2>Internship &amp; experience</h2>
+        <p class="sub">What I worked on and what I learned.</p>
+        <div class="tl" id="expBox"></div>
+      </section>
+
+      <!-- WORKSHOPS -->
+      <section id="workshops">
+        <h2>Workshops &amp; events</h2>
+        <p class="sub">Photos from the workshops and events I attended. Click to enlarge.</p>
+        <div class="grid" id="workBox"></div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certs">
+        <h2>Certifications &amp; Participation</h2>
+        <div class="grid" id="certBox"></div>
+      </section>
+
+      <!-- RESUME -->
+      <section id="resume">
+        <div class="resume">
+          <div>
+            <h2>My resume</h2>
+            <p style="margin: 0">One page. Skills, projects, internship and certificates.</p>
+          </div>
+          <a class="btn" href="resume.pdf" download>Download resume</a>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="sub">Looking for a fresher role &amp; referrals</p>
+        <a class="big" href="mailto:panigouraw052@gmail.com">panigouraw052@gmail.com</a>
+        <div class="links">
+          <a href="https://github.com/panigouraw">GitHub</a>
+          <a href="https://www.linkedin.com/in/pani-gouraw-kalisetty-87b353379">LinkedIn</a>
+          <a href="tel:+918247429921">8247429921</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">© 2026 Pani Gouraw K. Built by me with web projects &amp; collab with me</div>
+    </footer>
+
+    <!-- Big image viewer (opens when you click a photo) -->
+    <div id="lb" role="dialog" aria-label="Image viewer">
+      <button aria-label="Close">×</button>
+      <img alt="" />
+      <p></p>
+    </div>
+
+    <script src="script .js"></script>
+  </body>
+</html>
