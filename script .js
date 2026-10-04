@@ -7,14 +7,17 @@
 
 const facts = [
   { label: "College", value: "Arjun College of Technology" },
-  { label: "Degree", value: "B.Tech, Artificial Intelligence and Data Science" },
-  { label: "Location", value: "Coimbatore, India" }
+  {
+    label: "Degree",
+    value: "B.Tech, Artificial Intelligence and Data Science",
+  },
+  { label: "Location", value: "Coimbatore, India" },
 ];
 
 const skills = {
   Frontend: ["HTML", "CSS", "JavaScript", "React.js"],
   Backend: ["Python", "FastAPI", "MySQL"],
-  Tools: ["Git", "GitHub", "VS Code", "Postman"]
+  Tools: ["Git", "GitHub", "VS Code", "Postman"],
 };
 
 const projects = [
@@ -23,43 +26,43 @@ const projects = [
     text: "A YouTube-style home page with a video grid, sidebar and search bar.",
     tags: ["HTML", "CSS", "JavaScript"],
     image: "portfolioImages/youtube-clone.jpg",
-    link: "https://github.com/panigouraw/YouTube-clone"
+    link: "https://panigouraw.github.io/YouTube-clone/",
   },
   {
     title: "Facebook Clone",
     text: "A Facebook-style layout with a news feed, posts and a responsive design.",
     tags: ["HTML", "CSS", "JavaScript"],
     image: "portfolioImages/facebookClone.jpg",
-    link: "https://github.com/panigouraw/Facebook-Clone"
+    link: "https://panigouraw.github.io/Facebook-Clone/",
   },
   {
     title: "Coffee Day Website",
     text: "A clean café website with menu, offers and contact sections.",
     tags: ["HTML", "CSS"],
     image: "portfolioImages/coffedayShop.jpg",
-    link: "https://github.com/panigouraw/Cafe--Website"
+    link: "https://panigouraw.github.io/Cafe--Website/",
   },
   {
     title: "Interior Design Album",
     text: "A photo album website to showcase interior design work in a neat gallery.",
     tags: ["HTML", "CSS", "JavaScript"],
     image: "portfolioImages/intetior.jpg",
-    link: "#"
+    link: "https://panigouraw.github.io/interior-Design/",
   },
   {
     title: "Task Management App",
     text: "An app to add, update and track daily tasks until they are done.",
     tags: ["React.js", "JavaScript"],
     image: "portfolioImages/Time ManagementClone.jpg",
-    link: "https://github.com/panigouraw/Task-Management-Apllication"
+    link: "https://panigouraw.github.io/Task-Management-",
   },
   {
     title: "E-commerce Website",
     text: "An online shopping site with product listing and cart.",
     tags: ["React.js", "Python", "FastAPI"],
     image: "portfolioImages/shopingClone.jpg",
-    link: "https://github.com/panigouraw/E-commerence"
-  }
+    link: "https://panigouraw.github.io/E-commerence/",
+  },
 ];
 
 const experience = [
@@ -72,8 +75,8 @@ const experience = [
       "Built responsive web pages using HTML, CSS, JavaScript and React.js",
       "Created backend APIs with Python and FastAPI and tested them in Postman",
       "Stored and managed data using MySQL",
-      "Used Git and GitHub to manage code and publish projects"
-    ]
+      "Used Git and GitHub to manage code and publish projects",
+    ],
   },
   {
     role: "Web Development Intern",
@@ -84,9 +87,9 @@ const experience = [
       "Built a web project using HTML, CSS, JavaScript and React.js",
       "Designed responsive pages that work on mobile and desktop",
       "Connected the app to backend APIs built with Python and FastAPI",
-      "Pushed the project to GitHub and submitted it for review"
-    ]
-  }
+      "Pushed the project to GitHub and submitted it for review",
+    ],
+  },
 ];
 
 const workshops = [
@@ -94,14 +97,14 @@ const workshops = [
     title: "UX Design with AI",
     place: "National Institute of Technology, Tiruchirappalli",
     date: "Aug 2026",
-    image: "portfolioImages/nit.jpg"
+    image: "portfolioImages/nit.jpg",
   },
   {
     title: "Global Startup",
     place: "Codissia Trade Fair Complex, Coimbatore",
     date: "Oct 2025",
-    image: "portfolioImages/globalstartup.jpg"
-  }
+    image: "portfolioImages/globalstartup.jpg",
+  },
 ];
 
 const certificates = [
@@ -109,20 +112,20 @@ const certificates = [
     title: "UX Design with AI",
     issuer: "World Technocon",
     year: "2026",
-    image: "portfolioImages/nitcertificate.jpg"
+    image: "portfolioImages/nitcertificate.jpg",
   },
   {
     title: "Global Startup",
     issuer: "Issued by",
     year: "2025",
-    image: "portfolioImages/startup3.jpg"
+    image: "portfolioImages/startup3.jpg",
   },
   {
     title: "Thiranex",
     issuer: "Online project-based internship",
     year: "2026",
-    image: "portfolioImages/thiranex.png"
-  }
+    image: "portfolioImages/thiranex.png",
+  },
 ];
 
 // ===================================================
@@ -132,26 +135,41 @@ const certificates = [
 // Makes a photo box. If the image file is missing, the image is removed
 // and the colour box with the title stays.
 function makePhoto(src, title) {
-  return '<div class="ph">' + title +
-    '<img src="' + src + '" alt="' + title + '" onclick="openImage(this)" onerror="this.remove()">' +
-    '</div>';
+  return (
+    '<div class="ph">' +
+    title +
+    '<img src="' +
+    src +
+    '" alt="' +
+    title +
+    '" onclick="openImage(this)" onerror="this.remove()">' +
+    "</div>"
+  );
 }
 
 // ---------- About: facts ----------
 let factsHTML = "";
 for (let i = 0; i < facts.length; i++) {
-  factsHTML += '<div class="fact"><small>' + facts[i].label + '</small>' + facts[i].value + '</div>';
+  factsHTML +=
+    '<div class="fact"><small>' +
+    facts[i].label +
+    "</small>" +
+    facts[i].value +
+    "</div>";
 }
 document.getElementById("facts").innerHTML = factsHTML;
 
 // ---------- Skills ----------
 let skillsHTML = "";
 for (let group in skills) {
-  skillsHTML += '<div class="card"><div class="pad"><h3>' + group + '</h3><div class="chips" style="margin-top:14px">';
+  skillsHTML +=
+    '<div class="card"><div class="pad"><h3>' +
+    group +
+    '</h3><div class="chips" style="margin-top:14px">';
   for (let i = 0; i < skills[group].length; i++) {
-    skillsHTML += '<span class="chip">' + skills[group][i] + '</span>';
+    skillsHTML += '<span class="chip">' + skills[group][i] + "</span>";
   }
-  skillsHTML += '</div></div></div>';
+  skillsHTML += "</div></div></div>";
 }
 document.getElementById("skillBox").innerHTML = skillsHTML;
 
@@ -159,11 +177,17 @@ document.getElementById("skillBox").innerHTML = skillsHTML;
 let projectsHTML = "";
 for (let i = 0; i < projects.length; i++) {
   let p = projects[i];
-  projectsHTML += '<div class="card">' + makePhoto(p.image, p.title) +
-    '<div class="pad"><h3>' + p.title + '</h3><p>' + p.text + '</p>' +
+  projectsHTML +=
+    '<div class="card">' +
+    makePhoto(p.image, p.title) +
+    '<div class="pad"><h3>' +
+    p.title +
+    "</h3><p>" +
+    p.text +
+    "</p>" +
     '<div class="chips" style="margin:14px 0">';
   for (let j = 0; j < p.tags.length; j++) {
-    projectsHTML += '<span class="chip">' + p.tags[j] + '</span>';
+    projectsHTML += '<span class="chip">' + p.tags[j] + "</span>";
   }
   projectsHTML += '</div><a href="' + p.link + '">View project</a></div></div>';
 }
@@ -173,12 +197,19 @@ document.getElementById("projectBox").innerHTML = projectsHTML;
 let expHTML = "";
 for (let i = 0; i < experience.length; i++) {
   let e = experience[i];
-  expHTML += '<div class="item"><div class="meta">' + e.date + '</div>' +
-    '<h3>' + e.role + ', ' + e.company + '</h3><ul>';
+  expHTML +=
+    '<div class="item"><div class="meta">' +
+    e.date +
+    "</div>" +
+    "<h3>" +
+    e.role +
+    ", " +
+    e.company +
+    "</h3><ul>";
   for (let j = 0; j < e.points.length; j++) {
-    expHTML += '<li>' + e.points[j] + '</li>';
+    expHTML += "<li>" + e.points[j] + "</li>";
   }
-  expHTML += '</ul></div>';
+  expHTML += "</ul></div>";
 }
 document.getElementById("expBox").innerHTML = expHTML;
 
@@ -186,8 +217,16 @@ document.getElementById("expBox").innerHTML = expHTML;
 let workHTML = "";
 for (let i = 0; i < workshops.length; i++) {
   let w = workshops[i];
-  workHTML += '<div class="card">' + makePhoto(w.image, w.title) +
-    '<div class="pad"><div class="meta">' + w.date + '</div><h3>' + w.title + '</h3><p>' + w.place + '</p></div></div>';
+  workHTML +=
+    '<div class="card">' +
+    makePhoto(w.image, w.title) +
+    '<div class="pad"><div class="meta">' +
+    w.date +
+    "</div><h3>" +
+    w.title +
+    "</h3><p>" +
+    w.place +
+    "</p></div></div>";
 }
 document.getElementById("workBox").innerHTML = workHTML;
 
@@ -195,8 +234,16 @@ document.getElementById("workBox").innerHTML = workHTML;
 let certHTML = "";
 for (let i = 0; i < certificates.length; i++) {
   let c = certificates[i];
-  certHTML += '<div class="card">' + makePhoto(c.image, c.title) +
-    '<div class="pad"><div class="meta">' + c.year + '</div><h3>' + c.title + '</h3><p>' + c.issuer + '</p></div></div>';
+  certHTML +=
+    '<div class="card">' +
+    makePhoto(c.image, c.title) +
+    '<div class="pad"><div class="meta">' +
+    c.year +
+    "</div><h3>" +
+    c.title +
+    "</h3><p>" +
+    c.issuer +
+    "</p></div></div>";
 }
 document.getElementById("certBox").innerHTML = certHTML;
 
@@ -213,21 +260,34 @@ function closeImage() {
   viewer.classList.remove("open");
 }
 
-viewer.onclick = closeImage;                 // click anywhere to close
-document.onkeydown = function (event) {      // Esc key to close
+viewer.onclick = closeImage; // click anywhere to close
+document.onkeydown = function (event) {
+  // Esc key to close
   if (event.key === "Escape") {
     closeImage();
   }
 };
 
 // ---------- Scroll: progress bar + menu highlight ----------
-const sectionIds = ["home", "about", "skills", "projects", "experience", "workshops", "certs", "resume", "contact"];
+const sectionIds = [
+  "home",
+  "about",
+  "skills",
+  "projects",
+  "experience",
+  "workshops",
+  "certs",
+  "resume",
+  "contact",
+];
 const menuLinks = document.querySelectorAll("#menu a");
 
 function updateOnScroll() {
   // progress bar
   let scrolled = document.documentElement.scrollTop;
-  let total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let total =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
   document.getElementById("bar").style.width = (scrolled / total) * 100 + "%";
 
   // find which section is on screen
@@ -256,7 +316,7 @@ const themeBtn = document.getElementById("themeBtn");
 
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);   // browser remembers your choice
+  localStorage.setItem("theme", theme); // browser remembers your choice
   themeBtn.textContent = theme === "dark" ? "☀️" : "🌙";
 }
 
